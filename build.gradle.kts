@@ -1,25 +1,67 @@
+import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
+
 plugins {
+    application
     id("java")
+    id("io.spring.dependency-management") version "1.1.6"
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+buildscript {
+    repositories {
+        maven {
+            url = uri("https://repo.spring.io/plugins-snapshot")
+        }
+    }
+    dependencies {
+        classpath("io.spring.gradle:dependency-management-plugin:<<snapshot-version>>")
     }
 }
 
-repositories {
-    mavenCentral()
+configure(allprojects) {
+    group = "org.example"
+    version = "1.0-SNAPSHOT"
+
+    tasks.withType(Test::class) {
+        useJUnitPlatform() {
+
+        }
+    }
 }
 
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+configure(subprojects) {
+    apply(plugin = "java")
+    apply(plugin = "io.spring.dependency-management")
+
+    tasks.withType(JavaCompile::class) {
+        sourceCompatibility = "${JavaVersion.VERSION_21}"
+        targetCompatibility = "${JavaVersion.VERSION_21}"
+    }
+
+    configure<DependencyManagementExtension> {
+        dependencies {
+            dependency("com.microsoft.playwright:playwright:1.45.1")
+
+            dependency("org.junit.jupiter:junit-jupiter-engine:5.10.2")
+            dependency("org.junit.jupiter:junit-jupiter-api:5.10.2")
+            dependency("org.junit.jupiter:junit-jupiter-params:5.10.2")
+        }
+    }
+}
+
+tasks.register<JavaExec>("playwright") {
+    classpath(sourceSets["test"].runtimeClasspath)
+    mainClass.set("com.microsoft.playwright.CLI")
 }
 
 tasks.test {
     useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
