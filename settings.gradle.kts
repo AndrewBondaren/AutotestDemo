@@ -1,2 +1,5 @@
 rootProject.name = "AutotestDemo"
-include("playwright")
+include("at-web-integration")
+include("at-web-selenium")
+include("tests")
+include("at-api-client")
