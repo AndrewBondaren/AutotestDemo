@@ -1,19 +1,16 @@
-plugins {
-    id("java")
-}
-
-group = "org.demo"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation(project(":common"))
+
+    implementation("com.google.inject:guice")
+    implementation("org.aeonbits.owner:owner")
+
+    compileOnly("org.projectlombok:lombok")
+    annotationProcessor("org.projectlombok:lombok")
+
+    implementation("com.squareup.retrofit2:retrofit")
+    implementation("com.squareup.retrofit2:converter-jackson")
+
+    implementation("org.slf4j:slf4j-api")
+    implementation("org.slf4j:slf4j-simple")
 }
 
-tasks.test {
-    useJUnitPlatform()
-}

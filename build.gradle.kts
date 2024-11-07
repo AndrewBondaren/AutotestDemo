@@ -46,11 +46,17 @@ configure(subprojects) {
             dependency("com.squareup.retrofit2:retrofit:2.11.0")
             dependency("com.squareup.retrofit2:converter-jackson:2.11.0")
 
+            dependency("org.slf4j:slf4j-api:2.0.16")
+            dependency("org.slf4j:slf4j-simple:2.0.16")
+
+            dependency("io.qameta.allure:allure-okhttp3:2.29.0")
+
             dependency("com.github.javafaker:javafaker:1.0.2")
 
             dependency("org.projectlombok:lombok:1.18.34")
 
             dependency("com.google.inject:guice:7.0.0")
+            dependency("org.aeonbits.owner:owner:1.0.12")
 
             dependency("org.jdbi:jdbi3-core:3.45.4")
             dependency("org.jdbi:jdbi3-sqlobject:3.45.4")
