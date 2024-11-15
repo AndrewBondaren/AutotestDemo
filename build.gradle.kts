@@ -37,6 +37,8 @@ configure(subprojects) {
     tasks.withType(JavaCompile::class) {
         sourceCompatibility = "${JavaVersion.VERSION_17}"
         targetCompatibility = "${JavaVersion.VERSION_17}"
+        options.encoding = "UTF-8"
+        options.compilerArgs.add("-parameters")
     }
 
     configure<DependencyManagementExtension> {
@@ -45,9 +47,6 @@ configure(subprojects) {
 
             dependency("com.codeborne:selenide:7.5.1")
 
-            dependency("com.squareup.retrofit2:retrofit:2.11.0")
-            dependency("com.squareup.retrofit2:converter-jackson:2.11.0")
-
             dependency("org.slf4j:slf4j-api:2.0.16")
             dependency("org.slf4j:slf4j-simple:2.0.16")
 
@@ -55,6 +54,7 @@ configure(subprojects) {
             dependency("io.qameta.allure:allure-java-commons:2.29.0")
 
             dependency("com.github.javafaker:javafaker:1.0.2")
+            dependency("org.awaitility:awaitility:4.2.2")
 
             dependency("org.projectlombok:lombok:1.18.34")
 
@@ -64,6 +64,12 @@ configure(subprojects) {
             dependency("org.jdbi:jdbi3-core:3.45.4")
             dependency("org.jdbi:jdbi3-sqlobject:3.45.4")
             dependency("org.jdbi:jdbi3-postgres:3.45.4")
+
+            dependency("com.squareup.retrofit2:retrofit:2.11.0")
+            dependency("com.squareup.retrofit2:converter-jackson:2.11.0")
+            dependency("com.fasterxml.jackson.core:jackson-databind:2.18.0")
+            dependency("com.fasterxml.jackson.module:jackson-module-parameter-names:2.18.0")
+            dependency("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.0")
 
             dependency("org.junit.jupiter:junit-jupiter-engine:5.10.2")
             dependency("org.junit.jupiter:junit-jupiter-api:5.10.2")

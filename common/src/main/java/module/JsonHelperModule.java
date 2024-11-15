@@ -10,7 +10,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
-import ru.beeline.common.utils.JsonHelper;
+import utils.JsonHelper;
 
 import java.time.ZonedDateTime;
 

@@ -3,9 +3,9 @@ package module;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import org.aeonbits.owner.ConfigFactory;
-import ru.beeline.common.config.UserDataConfig;
-import ru.beeline.common.guice.ThreadLocalScoped;
-import ru.beeline.common.utils.CustomScopeUtils;
+import config.UserDataConfig;
+import guice.ThreadLocalScoped;
+import utils.CustomScopeUtils;
 
 
 public class DataModule extends AbstractModule {

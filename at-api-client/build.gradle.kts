@@ -15,5 +15,8 @@ dependencies {
 
     implementation("io.qameta.allure:allure-okhttp3")
     implementation("org.apache.commons:commons-text")
+
+    compileOnly("org.projectlombok:lombok")
+    annotationProcessor("org.projectlombok:lombok")
 }
 

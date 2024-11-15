@@ -4,7 +4,7 @@ import lombok.NoArgsConstructor;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
-import ru.beeline.api.retrofit.annotation.Enveloped;
+import org.demo.retrofit.annotation.Enveloped;
 
 import javax.annotation.Nullable;
 import java.io.IOException;

@@ -1,7 +1,6 @@
 package utils;
 
 import com.github.javafaker.Faker;
-import org.apache.commons.lang3.StringUtils;
 
 import java.security.SecureRandom;
 import java.time.LocalDate;
@@ -10,8 +9,7 @@ import java.time.ZoneId;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static ru.beeline.common.data.ContractIdList.MULTIPLE_POINTS_LIST;
-import static ru.beeline.common.utils.RegexUtils.removeColons;
+import static utils.RegexUtils.removeColons;
 
 
 @SuppressWarnings({"all"})
@@ -193,14 +191,6 @@ public final class RandomUtils {
     public static String generateRandomCharacter() {
         final int randomCharIndex = RANDOM.nextInt(cyrillicCharacters.length());
         return String.valueOf(cyrillicCharacters.charAt(randomCharIndex));
-    }
-
-    public static List<String> generateContractId() {
-        if (StringUtils.isNotEmpty(System.getenv("CONTRACT_ID"))) {
-            return Collections.singletonList(System.getenv("CONTRACT_ID"));
-        } else {
-            return Collections.singletonList(getRandomListElement(MULTIPLE_POINTS_LIST.getContractIdList()));
-        }
     }
 
 }

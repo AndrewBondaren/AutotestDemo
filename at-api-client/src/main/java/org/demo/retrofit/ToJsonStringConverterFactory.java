@@ -5,7 +5,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
-import ru.beeline.api.retrofit.annotation.Json;
+import org.demo.retrofit.annotation.Json;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
