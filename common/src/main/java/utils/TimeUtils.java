@@ -1,4 +1,4 @@
-package ru.beeline.common.utils;
+package utils;
 
 import java.time.Duration;
 import java.time.temporal.Temporal;

@@ -1,4 +1,4 @@
-package ru.beeline.common.module;
+package module;
 
 import com.fasterxml.jackson.datatype.jsr310.deser.InstantDeserializer;
 

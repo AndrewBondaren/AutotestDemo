@@ -1,4 +1,4 @@
-package ru.beeline.common.utils;
+package utils;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;

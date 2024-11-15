@@ -1,4 +1,4 @@
-package ru.beeline.common.utils;
+package utils;
 
 import org.awaitility.core.ConditionTimeoutException;
 import org.awaitility.core.ThrowingRunnable;

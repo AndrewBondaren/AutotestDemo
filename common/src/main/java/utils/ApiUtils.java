@@ -1,4 +1,4 @@
-package ru.beeline.common.utils;
+package utils;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;

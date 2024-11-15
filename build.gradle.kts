@@ -3,6 +3,7 @@ import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 plugins {
     application
     id("java")
+    id("io.qameta.allure") version "2.12.0"
     id("io.spring.dependency-management") version "1.1.6"
 }
 
@@ -31,6 +32,7 @@ configure(allprojects) {
 configure(subprojects) {
     apply(plugin = "java")
     apply(plugin = "io.spring.dependency-management")
+    apply(plugin = "io.qameta.allure")
 
     tasks.withType(JavaCompile::class) {
         sourceCompatibility = "${JavaVersion.VERSION_17}"
@@ -50,6 +52,7 @@ configure(subprojects) {
             dependency("org.slf4j:slf4j-simple:2.0.16")
 
             dependency("io.qameta.allure:allure-okhttp3:2.29.0")
+            dependency("io.qameta.allure:allure-java-commons:2.29.0")
 
             dependency("com.github.javafaker:javafaker:1.0.2")
 
@@ -65,6 +68,11 @@ configure(subprojects) {
             dependency("org.junit.jupiter:junit-jupiter-engine:5.10.2")
             dependency("org.junit.jupiter:junit-jupiter-api:5.10.2")
             dependency("org.junit.jupiter:junit-jupiter-params:5.10.2")
+
+            dependency("org.apache.commons:commons-text:1.12.0")
+            dependency("org.apache.commons:commons-lang3:3.17.0")
+            dependency("commons-codec:commons-codec:1.17.1")
+            dependency("org.apache.poi:poi:5.3.0")
         }
     }
 

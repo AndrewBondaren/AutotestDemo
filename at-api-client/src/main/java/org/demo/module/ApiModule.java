@@ -5,7 +5,9 @@ import com.google.inject.Provides;
 import guice.ThreadLocalScoped;
 import okhttp3.OkHttpClient;
 import org.aeonbits.owner.ConfigFactory;
+import org.demo.allure.AllureOkHttp3WithSteps;
 import org.demo.config.ApiConfig;
+import org.demo.retrofit.DebugLoggingInterceptor;
 import utils.CustomScopeUtils;
 
 import java.util.concurrent.TimeUnit;

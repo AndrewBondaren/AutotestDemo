@@ -1,4 +1,4 @@
-package ru.beeline.common.guice;
+package guice;
 
 import com.google.inject.BindingAnnotation;
 

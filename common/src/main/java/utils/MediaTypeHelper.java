@@ -1,4 +1,4 @@
-package ru.beeline.common.utils;
+package utils;
 
 import ru.beeline.common.data.types.MediaType;
 

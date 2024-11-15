@@ -1,4 +1,4 @@
-package ru.beeline.common.utils;
+package utils;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;

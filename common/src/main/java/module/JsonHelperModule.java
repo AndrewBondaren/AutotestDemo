@@ -1,4 +1,4 @@
-package ru.beeline.common.module;
+package module;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;

@@ -1,4 +1,4 @@
-package ru.beeline.api.allure;
+package org.demo.allure;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.AllureLifecycle;

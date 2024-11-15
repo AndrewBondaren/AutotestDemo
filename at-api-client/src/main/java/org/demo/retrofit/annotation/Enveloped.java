@@ -1,4 +1,4 @@
-package ru.beeline.api.retrofit.annotation;
+package org.demo.retrofit.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

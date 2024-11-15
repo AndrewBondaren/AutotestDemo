@@ -1,4 +1,4 @@
-package org.demo.module;
+package org.demo.retrofit;
 
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package org.demo.module;
+package org.demo.retrofit;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.NonNull;
