@@ -59,6 +59,7 @@ configure(subprojects) {
             dependency("org.projectlombok:lombok:1.18.34")
 
             dependency("com.google.inject:guice:7.0.0")
+            dependency("name.falgout.jeffrey.testing.junit5:guice-extension:1.2.1")
             dependency("org.aeonbits.owner:owner:1.0.12")
 
             dependency("org.jdbi:jdbi3-core:3.45.4")
